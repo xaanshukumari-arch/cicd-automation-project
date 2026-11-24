@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing project dependencies"
+
+  pre_build:
+    commands:
+      - echo "Starting application validation"
+
+  build:
+    commands:
+      - echo "Building CI/CD sample application"
+      - test -f index.html
+
+  post_build:
+    commands:
+      - echo "Build completed successfully"
+
+artifacts:
+  files:
+    - index.html
